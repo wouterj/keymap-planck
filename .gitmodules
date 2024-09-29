@@ -1,0 +1,3 @@
+[submodule "vendor/kyria-keymap"]
+	path = vendor/kyria-keymap
+	url = git@github.com:andrewjrae/kyria-keymap
