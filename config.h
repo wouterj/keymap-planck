@@ -42,4 +42,9 @@
 */
 // #define MIDI_ADVANCED
 
-#define HOLD_ON_OTHER_KEY_PRESS
+/*
+ * Tab-hold options
+ */
+
+#define PERMISSIVE_HOLD
+#define TAPPING_TERM 100
