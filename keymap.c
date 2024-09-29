@@ -21,6 +21,8 @@ enum planck_layers { _QWERTY, _DVORAK, _LOWER, _RAISE, _ADJUST };
 
 enum planck_keycodes { QWERTY = SAFE_RANGE, DVORAK, BACKLIT, XCASE };
 
+enum { TD_PRN, TD_BRC, TD_CBR };
+
 #define LOWER MO(_LOWER)
 #define RAISE MO(_RAISE)
 
@@ -75,9 +77,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------------------------------------------------------'
  */
 [_LOWER] = LAYOUT_planck_grid(
-    KC_TILD, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, KC_AMPR,    KC_ASTR,    KC_LPRN, KC_RPRN, KC_BSPC,
-    KC_DEL,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_UNDS,    KC_PLUS,    KC_LCBR, KC_RCBR, KC_PIPE,
-    _______, KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  S(KC_NUHS), S(KC_NUBS), KC_LBRC, KC_RBRC, _______,
+    KC_TILD, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, KC_AMPR,    KC_ASTR,    TD(TD_PRN), KC_RPRN, KC_BSPC,
+    KC_DEL,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_UNDS,    KC_PLUS,    TD(TD_CBR), KC_RCBR, KC_PIPE,
+    _______, KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  S(KC_NUHS), S(KC_NUBS), TD(TD_BRC), KC_RBRC, _______,
     _______, _______, _______, _______, _______, _______, _______, _______,    KC_MNXT,    KC_VOLD, KC_VOLU, KC_MPLY
 ),
 
@@ -210,6 +212,38 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
     tokens[index] = defer_exec(1000, reset_note, &melody[index][1][0]);
     return false;
 }
+
+/***************************
+ * Double taps             */
+typedef struct {
+    char open;
+    char close;
+} tap_dance_braces_t;
+
+#define ACTION_TAP_DANCE_BRACES(bopen, bclose) \
+    { .fn = {dance_braces_each, NULL, NULL, NULL}, .user_data = (void *)&((tap_dance_braces_t){bopen, bclose}), }
+
+void dance_braces_each(tap_dance_state_t *state, void *user_data) {
+    tap_dance_braces_t *pair = (tap_dance_braces_t *)user_data;
+
+    if (state->count == 1) {
+        if (get_mods() & MOD_MASK_SHIFT) {
+            send_char(pair->close);
+        } else {
+            send_char(pair->open);
+        }
+    } else {
+        send_char(pair->close);
+        SEND_STRING(SS_TAP(X_LEFT));
+        reset_tap_dance(state);
+    }
+}
+
+tap_dance_action_t tap_dance_actions[] = {
+    [TD_PRN] = ACTION_TAP_DANCE_BRACES('(', ')'),
+    [TD_CBR] = ACTION_TAP_DANCE_BRACES('{', '}'),
+    [TD_BRC] = ACTION_TAP_DANCE_BRACES('[', ']'),
+};
 
 /***************************
  * Case Mode Functionality */
