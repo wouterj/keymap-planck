@@ -189,6 +189,15 @@ tap_dance_action_t tap_dance_actions[] = {
     [TD_BRC] = ACTION_TAP_DANCE_BRACES('[', ']'),
 };
 
+bool get_retro_tapping(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case SFT_T(KC_SPC):
+            return true;
+        default:
+            return false;
+    }
+}
+
 /***************************
  * Case Mode Functionality */
 bool use_default_xcase_separator(uint16_t keycode, const keyrecord_t *record) {

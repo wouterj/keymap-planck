@@ -46,5 +46,7 @@
  * Tab-hold options
  */
 
-#define PERMISSIVE_HOLD
+//#define PERMISSIVE_HOLD
 #define TAPPING_TERM 100
+//#define HOLD_ON_OTHER_KEY_PRESS
+#define RETRO_TAPPING_PER_KEY
