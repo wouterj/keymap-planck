@@ -126,6 +126,17 @@ rect.key.trans  { fill:#eceff4; }
 rect.side.layer-switch-active { filter:brightness(110%); }
 text.layer-switch-active { fill:white; }
 
+.keypos-38 rect,
+.keypos-39 rect,
+.keypos-40 rect,
+.keypos-41 rect,
+.keypos-42 rect { transform:scaleY(-1); }
+.keypos-38 text,
+.keypos-39 text,
+.keypos-40 text,
+.keypos-41 text,
+.keypos-42 text { dominant-baseline:hanging; }
+
 rect.key.layer-switch,
 rect.key.layer-switch-active { fill:#a3be8c; }
 rect.key.double-tap   { fill:#b48ead; }
@@ -348,7 +359,7 @@ rect.key.custom       { fill:#ebcb8b; }
 <rect rx="6" ry="6" x="-54" y="-26" width="108" height="52" class="key mod-down side"/>
 <rect rx="4" ry="4" x="-48" y="-24" width="96" height="40" class="key mod-down"/>
 <text x="0" y="-4" class="key mod-down tap">Space</text>
-<text x="0" y="24" class="key mod-down hold">Shift</text>
+<text x="0" y="-24" class="key mod-down shifted">Shift</text>
 </g>
 <g transform="translate(420, 196)" class="key layer-switch keypos-42">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key layer-switch side"/>

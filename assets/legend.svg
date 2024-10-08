@@ -1,0 +1,202 @@
+<svg width="300" height="224" viewBox="0 0 300 224" class="keymap" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<style>/* inherit to force styles through use tags */
+svg path {
+    fill: inherit;
+}
+
+/* font and background color specifications */
+svg.keymap {
+    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+    font-size: 14px;
+    font-kerning: normal;
+    text-rendering: optimizeLegibility;
+    fill: #24292e;
+}
+
+/* default key styling */
+rect.key {
+    fill: #f6f8fa;
+}
+
+rect.key, rect.combo {
+    stroke: #c9cccf;
+    stroke-width: 1;
+}
+
+/* default key side styling, only used is draw_key_sides is set */
+rect.side {
+    filter: brightness(90%);
+}
+
+/* color accent for combo boxes */
+rect.combo, rect.combo-separate {
+    fill: #cdf;
+}
+
+/* color accent for held keys */
+rect.held, rect.combo.held {
+    fill: #fdd;
+}
+
+/* color accent for ghost (optional) keys */
+rect.ghost, rect.combo.ghost {
+    stroke-dasharray: 4, 4;
+    stroke-width: 2;
+}
+
+text {
+    text-anchor: middle;
+    dominant-baseline: middle;
+}
+
+/* styling for layer labels */
+text.label {
+    font-weight: bold;
+    text-anchor: start;
+    stroke: white;
+    stroke-width: 4;
+    paint-order: stroke;
+}
+
+/* styling for optional footer */
+text.footer {
+    text-anchor: end;
+    dominant-baseline: auto;
+    stroke: white;
+    stroke-width: 4;
+    paint-order: stroke;
+}
+
+/* styling for combo tap, and key hold/shifted label text */
+text.combo, text.hold, text.shifted {
+    font-size: 11px;
+}
+
+text.hold {
+    text-anchor: middle;
+    dominant-baseline: auto;
+}
+
+text.shifted {
+    text-anchor: middle;
+    dominant-baseline: hanging;
+}
+
+text.layer-activator {
+    text-decoration: underline;
+}
+
+/* styling for hold/shifted label text in combo box */
+text.combo.hold, text.combo.shifted {
+    font-size: 8px;
+}
+
+/* lighter symbol for transparent keys */
+text.trans {
+    fill: #7b7e81;
+}
+
+/* styling for combo dendrons */
+path.combo {
+    stroke-width: 1;
+    stroke: gray;
+    fill: none;
+}
+
+/* Start Tabler Icons Cleanup */
+/* cannot use height/width with glyphs */
+.icon-tabler > path {
+    fill: inherit;
+    stroke: inherit;
+    stroke-width: 2;
+}
+/* hide tabler's default box */
+.icon-tabler > path[stroke="none"][fill="none"] {
+    visibility: hidden;
+}
+/* End Tabler Icons Cleanup */
+
+svg.keymap { font-size:11px; }
+a text.layer-activator { text-decoration:none; }
+rect.key {
+  stroke-width:0;
+  fill:#fff;
+}
+rect.key.trans  { fill:#eceff4; }
+rect.side.layer-switch-active { filter:brightness(110%); }
+text.layer-switch-active { fill:white; }
+
+rect.key.layer-switch,
+rect.key.layer-switch-active { fill:#a3be8c; }
+rect.key.double-tap   { fill:#b48ead; }
+rect.key.triple-tap   { fill:#d08770; }
+rect.key.mod-down     { fill:#88c0d0; }
+rect.key.mod-one-shot { fill:#81a1c1; }
+rect.key.custom       { fill:#ebcb8b; }
+</style>
+<g transform="translate(30, 0)" class="layer-LEGEND">
+<text x="0" y="28" class="label" id="LEGEND">LEGEND</text>
+<g transform="translate(0, 56)">
+<g transform="translate(30, 28)" class="key keypos-0">
+<rect rx="6" ry="6" x="-28" y="-26" width="56" height="52" class="key side"/>
+<rect rx="4" ry="4" x="-22" y="-24" width="44" height="40" class="key"/>
+<text x="0" y="-4" class="key tap">
+<tspan x="0" dy="-0.6em">Normal</tspan><tspan x="0" dy="1.2em">key</tspan>
+</text>
+</g>
+<g transform="translate(90, 28)" class="key mod-one-shot keypos-1">
+<rect rx="6" ry="6" x="-28" y="-26" width="56" height="52" class="key mod-one-shot side"/>
+<rect rx="4" ry="4" x="-22" y="-24" width="44" height="40" class="key mod-one-shot"/>
+<text x="0" y="-4" class="key mod-one-shot tap">
+<tspan x="0" dy="-1.2em">One</tspan><tspan x="0" dy="1.2em">shot</tspan>
+<tspan x="0" dy="1.2em">mod</tspan>
+</text>
+</g>
+<g transform="translate(150, 28)" class="key double-tap keypos-2">
+<rect rx="6" ry="6" x="-28" y="-26" width="56" height="52" class="key double-tap side"/>
+<rect rx="4" ry="4" x="-22" y="-24" width="44" height="40" class="key double-tap"/>
+<text x="0" y="-4" class="key double-tap tap">
+<tspan x="0" dy="-1.2em">Double</tspan><tspan x="0" dy="1.2em">tap</tspan>
+<tspan x="0" dy="1.2em">key</tspan>
+</text>
+</g>
+<g transform="translate(210, 28)" class="key layer-switch keypos-3">
+<rect rx="6" ry="6" x="-28" y="-26" width="56" height="52" class="key layer-switch side"/>
+<rect rx="4" ry="4" x="-22" y="-24" width="44" height="40" class="key layer-switch"/>
+<text x="0" y="-4" class="key layer-switch tap">
+<tspan x="0" dy="-0.6em">Layer</tspan><tspan x="0" dy="1.2em">switch</tspan>
+</text>
+</g>
+<g transform="translate(30, 84)" class="key custom keypos-4">
+<rect rx="6" ry="6" x="-28" y="-26" width="56" height="52" class="key custom side"/>
+<rect rx="4" ry="4" x="-22" y="-24" width="44" height="40" class="key custom"/>
+<text x="0" y="-4" class="key custom tap">
+<tspan x="0" dy="-0.6em">Custom</tspan><tspan x="0" dy="1.2em">key</tspan>
+</text>
+</g>
+<g transform="translate(90, 84)" class="key mod-down keypos-5">
+<rect rx="6" ry="6" x="-28" y="-26" width="56" height="52" class="key mod-down side"/>
+<rect rx="4" ry="4" x="-22" y="-24" width="44" height="40" class="key mod-down"/>
+<text x="0" y="-4" class="key mod-down tap">
+<tspan x="0" dy="-1.2em">Hold</tspan><tspan x="0" dy="1.2em">down</tspan>
+<tspan x="0" dy="1.2em">mod</tspan>
+</text>
+</g>
+<g transform="translate(150, 84)" class="key triple-tap keypos-6">
+<rect rx="6" ry="6" x="-28" y="-26" width="56" height="52" class="key triple-tap side"/>
+<rect rx="4" ry="4" x="-22" y="-24" width="44" height="40" class="key triple-tap"/>
+<text x="0" y="-4" class="key triple-tap tap">
+<tspan x="0" dy="-1.2em">Triple</tspan><tspan x="0" dy="1.2em">tap</tspan>
+<tspan x="0" dy="1.2em">key</tspan>
+</text>
+</g>
+<g transform="translate(210, 84)" class="key layer-switch-active keypos-7">
+<rect rx="6" ry="6" x="-28" y="-26" width="56" height="52" class="key layer-switch-active side"/>
+<rect rx="4" ry="4" x="-22" y="-24" width="44" height="40" class="key layer-switch-active"/>
+<text x="0" y="-4" class="key layer-switch-active tap">
+<tspan x="0" dy="-0.6em">Layer</tspan><tspan x="0" dy="1.2em">active</tspan>
+</text>
+</g>
+</g>
+</g>
+</svg>
