@@ -189,6 +189,15 @@ tap_dance_action_t tap_dance_actions[] = {
     [TD_BRC] = ACTION_TAP_DANCE_BRACES('[', ']'),
 };
 
+uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case QK_TAP_DANCE ... QK_TAP_DANCE_MAX:
+            return 200;
+        default:
+            return TAPPING_TERM;
+    }
+}
+
 bool get_retro_tapping(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case SFT_T(KC_SPC):
