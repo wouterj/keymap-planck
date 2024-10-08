@@ -21,7 +21,7 @@ enum planck_layers { _QWERTY, _DVORAK, _LOWER, _RAISE, _ADJUST };
 
 enum planck_keycodes { QWERTY = SAFE_RANGE, DVORAK, BACKLIT, XCASE };
 
-enum { TD_PRN, TD_BRC, TD_CBR };
+enum { TD_PRN, TD_BRC, TD_CBR, TD_QUOT, TD_GRAV };
 
 #define LOWER MO(_LOWER)
 #define RAISE MO(_RAISE)
@@ -31,7 +31,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_QWERTY] = LAYOUT_planck_grid(
     KC_TAB,        KC_Q,  KC_W,          KC_E,          KC_R,  KC_T,    KC_Y,          KC_U,  KC_I,            KC_O,            KC_P,    KC_BSPC,
-    KC_ESC,        KC_A,  KC_S,          KC_D,          KC_F,  KC_G,    KC_H,          KC_J,  KC_K,            KC_L,            KC_SCLN, KC_QUOT,
+    KC_ESC,        KC_A,  KC_S,          KC_D,          KC_F,  KC_G,    KC_H,          KC_J,  KC_K,            KC_L,            KC_SCLN, TD(TD_QUOT),
     OSM(MOD_LSFT), KC_Z,  KC_X,          KC_C,          KC_V,  KC_B,    KC_N,          KC_M,  KC_COMM,         KC_DOT,          KC_SLSH, RSFT_T(KC_ENT),
     OSM(MOD_LCTL), XCASE, OSM(MOD_LALT), OSM(MOD_LGUI), LOWER, KC_RSFT, SFT_T(KC_SPC), RAISE, RGUI_T(KC_LEFT), RALT_T(KC_DOWN), KC_UP,   RCTL_T(KC_RGHT)
 ),
@@ -44,17 +44,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ),
 
 [_LOWER] = LAYOUT_planck_grid(
-    KC_TILD, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, TD(TD_PRN), KC_RPRN, _______,
-    KC_DEL,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_UNDS, KC_PLUS, TD(TD_CBR), KC_RCBR, KC_PIPE,
-    _______, KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  _______, _______, TD(TD_BRC), KC_RBRC, _______,
+    KC_TILD, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, TD(TD_PRN), _______, _______,
+    KC_DEL,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_UNDS, KC_PLUS, TD(TD_CBR), _______, KC_PIPE,
+    _______, KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  _______, _______, TD(TD_BRC), _______, _______,
     _______, _______, _______, _______, _______, _______, _______, _______, KC_MNXT, KC_VOLD,    KC_VOLU, KC_MPLY
 ),
 
 [_RAISE] = LAYOUT_planck_grid(
-    KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    _______,
-    KC_DEL,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_MINS, KC_EQL,  _______, _______, KC_BSLS,
-    _______, KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  _______, _______, KC_PSCR, _______, _______,
-    _______, _______, _______, _______, _______, _______, _______, _______, KC_HOME, KC_PGDN, KC_PGUP, KC_END
+    TD(TD_GRAV), KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    _______,
+    KC_DEL,      KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_MINS, KC_EQL,  _______, _______, KC_BSLS,
+    _______,     KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  _______, _______, KC_PSCR, _______, _______,
+    _______,     _______, _______, _______, _______, _______, _______, _______, KC_HOME, KC_PGDN, KC_PGUP, KC_END
 ),
 
 [_ADJUST] = LAYOUT_planck_grid(
@@ -163,15 +163,21 @@ typedef struct {
     char open;
     char close;
 } tap_dance_braces_t;
+typedef struct {
+    char quote;
+} tap_dance_quotes_t;
 
 #define ACTION_TAP_DANCE_BRACES(bopen, bclose) \
     { .fn = {dance_braces_each, NULL, NULL, NULL}, .user_data = (void *)&((tap_dance_braces_t){bopen, bclose}), }
+#define ACTION_TAP_DANCE_QUOTES(quote) \
+    { .fn = {dance_quotes_each, NULL, NULL, NULL}, .user_data = (void *)&((tap_dance_quotes_t){quote}), }
 
 void dance_braces_each(tap_dance_state_t *state, void *user_data) {
     tap_dance_braces_t *pair = (tap_dance_braces_t *)user_data;
 
     if (state->count == 1) {
         if (get_mods() & MOD_MASK_SHIFT) {
+            del_mods(MOD_MASK_SHIFT); // disable shift, so it's not sent along with the keycode
             send_char(pair->close);
         } else {
             send_char(pair->open);
@@ -183,10 +189,24 @@ void dance_braces_each(tap_dance_state_t *state, void *user_data) {
     }
 }
 
+void dance_quotes_each(tap_dance_state_t *state, void *user_data) {
+    tap_dance_quotes_t *data = (tap_dance_quotes_t *)user_data;
+
+    if (state->count < 3) {
+        send_char(data->quote);
+    } else {
+        del_mods(MOD_MASK_SHIFT); // disable shift, so it's not sent along with the keycode
+        SEND_STRING(SS_TAP(X_LEFT));
+        reset_tap_dance(state);
+    }
+}
+
 tap_dance_action_t tap_dance_actions[] = {
     [TD_PRN] = ACTION_TAP_DANCE_BRACES('(', ')'),
     [TD_CBR] = ACTION_TAP_DANCE_BRACES('{', '}'),
     [TD_BRC] = ACTION_TAP_DANCE_BRACES('[', ']'),
+    [TD_QUOT] = ACTION_TAP_DANCE_QUOTES('\''),
+    [TD_GRAV] = ACTION_TAP_DANCE_QUOTES('`'),
 };
 
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
