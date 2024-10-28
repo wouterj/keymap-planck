@@ -8,14 +8,15 @@ Visualisation
 -------------
 
 * Normal key: normal single tap keys, with default behavior for Shift;
-* One shot mod: tap enables the modifier for the next key tap (allowing you
-  to press `Shift` and `w` separately for an uppercase W), hold behaves
-  like normal modifiers (holding `Shift` while tapping `w` creates an
-  uppercase W);
-* Hold down mod: tapping actives the key (e.g. arrow keys), holding actives
-  the modifier (e.g. Ctrl);
+* One shot mod: tap enables the modifier for the next key tap (e.g.
+  press `Shift` and `w` separately for an uppercase W), hold behaves
+  like normal modifiers (e.g. holding `Shift` while tapping `w`);
+* Hold down mod: tapping actives the key (e.g. arrow keys), holding
+  activates the modifier (e.g. Ctrl);
 * Double tap key: used for braces, where tapping the key twice produces
-  `()`, with the cursor placed in the middle (saving a left-arrow keystroke);
+  `()`, with the cursor placed in the middle (saving a left-arrow
+  keystroke). Single taps produce the open brace `(`, shift+single tap
+  produce the closing one `)`;
 * Triple tap key: used for quotes, behaves similar to double tap keys
   (tapping `'` three times creates `''` with the cursor in the middle);
 * Layer switch: when hold, the layer is switched (e.g. holding `LOWER`
