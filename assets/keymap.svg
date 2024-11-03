@@ -130,12 +130,14 @@ text.layer-switch-active { fill:white; }
 .keypos-39 rect,
 .keypos-40 rect,
 .keypos-41 rect,
-.keypos-42 rect { transform:scaleY(-1); }
+.keypos-42 rect,
+.keypos-43 rect { transform:scaleY(-1); }
 .keypos-38 text,
 .keypos-39 text,
 .keypos-40 text,
 .keypos-41 text,
-.keypos-42 text { dominant-baseline:hanging; }
+.keypos-42 text,
+.keypos-43 text { dominant-baseline:hanging; }
 
 rect.key.layer-switch,
 rect.key.layer-switch-active { fill:#a3be8c; }
@@ -355,36 +357,42 @@ rect.key.custom       { fill:#ebcb8b; }
 <a href="#LOWER">
 <text x="0" y="-4" class="key layer-switch tap layer-activator">LOWER</text>
 </a></g>
-<g transform="translate(336, 196)" class="key mod-down keypos-41">
-<rect rx="6" ry="6" x="-54" y="-26" width="108" height="52" class="key mod-down side"/>
-<rect rx="4" ry="4" x="-48" y="-24" width="96" height="40" class="key mod-down"/>
+<g transform="translate(308, 196)" class="key mod-down keypos-41">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key mod-down side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key mod-down"/>
+<text x="0" y="-4" class="key mod-down tap">Enter</text>
+<text x="0" y="-24" class="key mod-down shifted">Shift</text>
+</g>
+<g transform="translate(364, 196)" class="key mod-down keypos-42">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key mod-down side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key mod-down"/>
 <text x="0" y="-4" class="key mod-down tap">Space</text>
 <text x="0" y="-24" class="key mod-down shifted">Shift</text>
 </g>
-<g transform="translate(420, 196)" class="key layer-switch keypos-42">
+<g transform="translate(420, 196)" class="key layer-switch keypos-43">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key layer-switch side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key layer-switch"/>
 <a href="#UPPER">
 <text x="0" y="-4" class="key layer-switch tap layer-activator">UPPER</text>
 </a></g>
-<g transform="translate(476, 196)" class="key mod-down keypos-43">
+<g transform="translate(476, 196)" class="key mod-down keypos-44">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key mod-down side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key mod-down"/>
 <text x="0" y="-4" class="key mod-down tap">←</text>
 <text x="0" y="24" class="key mod-down hold">GUI</text>
 </g>
-<g transform="translate(532, 196)" class="key mod-down keypos-44">
+<g transform="translate(532, 196)" class="key mod-down keypos-45">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key mod-down side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key mod-down"/>
 <text x="0" y="-4" class="key mod-down tap">↓</text>
 <text x="0" y="24" class="key mod-down hold">RAlt</text>
 </g>
-<g transform="translate(588, 196)" class="key keypos-45">
+<g transform="translate(588, 196)" class="key keypos-46">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
 <text x="0" y="-4" class="key tap">↑</text>
 </g>
-<g transform="translate(644, 196)" class="key mod-down keypos-46">
+<g transform="translate(644, 196)" class="key mod-down keypos-47">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key mod-down side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key mod-down"/>
 <text x="0" y="-4" class="key mod-down tap">→</text>
@@ -601,38 +609,43 @@ rect.key.custom       { fill:#ebcb8b; }
 <a href="#LOWER">
 <text x="0" y="-4" class="key layer-switch-active tap layer-activator">LOWER</text>
 </a></g>
-<g transform="translate(336, 196)" class="key trans keypos-41">
-<rect rx="6" ry="6" x="-54" y="-26" width="108" height="52" class="key trans side"/>
-<rect rx="4" ry="4" x="-48" y="-24" width="96" height="40" class="key trans"/>
-<text x="0" y="-4" class="key trans tap">▽</text>
-</g>
-<g transform="translate(420, 196)" class="key trans keypos-42">
+<g transform="translate(308, 196)" class="key trans keypos-41">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key trans"/>
 <text x="0" y="-4" class="key trans tap">▽</text>
 </g>
-<g transform="translate(476, 196)" class="key keypos-43">
+<g transform="translate(364, 196)" class="key trans keypos-42">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key trans"/>
+<text x="0" y="-4" class="key trans tap">▽</text>
+</g>
+<g transform="translate(420, 196)" class="key trans keypos-43">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key trans"/>
+<text x="0" y="-4" class="key trans tap">▽</text>
+</g>
+<g transform="translate(476, 196)" class="key keypos-44">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
 <text x="0" y="-4" class="key tap">
 <tspan x="0" dy="-0.6em">♪</tspan><tspan x="0" dy="1.2em">Next</tspan>
 </text>
 </g>
-<g transform="translate(532, 196)" class="key keypos-44">
+<g transform="translate(532, 196)" class="key keypos-45">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
 <text x="0" y="-4" class="key tap">
 <tspan x="0" dy="-0.6em">↓</tspan><tspan x="0" dy="1.2em">Vol</tspan>
 </text>
 </g>
-<g transform="translate(588, 196)" class="key keypos-45">
+<g transform="translate(588, 196)" class="key keypos-46">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
 <text x="0" y="-4" class="key tap">
 <tspan x="0" dy="-0.6em">↑</tspan><tspan x="0" dy="1.2em">Vol</tspan>
 </text>
 </g>
-<g transform="translate(644, 196)" class="key keypos-46">
+<g transform="translate(644, 196)" class="key keypos-47">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
 <text x="0" y="-4" class="key tap">
@@ -849,33 +862,38 @@ rect.key.custom       { fill:#ebcb8b; }
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key trans"/>
 <text x="0" y="-4" class="key trans tap">▽</text>
 </g>
-<g transform="translate(336, 196)" class="key trans keypos-41">
-<rect rx="6" ry="6" x="-54" y="-26" width="108" height="52" class="key trans side"/>
-<rect rx="4" ry="4" x="-48" y="-24" width="96" height="40" class="key trans"/>
+<g transform="translate(308, 196)" class="key trans keypos-41">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key trans"/>
 <text x="0" y="-4" class="key trans tap">▽</text>
 </g>
-<g transform="translate(420, 196)" class="key layer-switch-active keypos-42">
+<g transform="translate(364, 196)" class="key trans keypos-42">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key trans"/>
+<text x="0" y="-4" class="key trans tap">▽</text>
+</g>
+<g transform="translate(420, 196)" class="key layer-switch-active keypos-43">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key layer-switch-active side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key layer-switch-active"/>
 <a href="#UPPER">
 <text x="0" y="-4" class="key layer-switch-active tap layer-activator">UPPER</text>
 </a></g>
-<g transform="translate(476, 196)" class="key keypos-43">
+<g transform="translate(476, 196)" class="key keypos-44">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
 <text x="0" y="-4" class="key tap">Home</text>
 </g>
-<g transform="translate(532, 196)" class="key keypos-44">
+<g transform="translate(532, 196)" class="key keypos-45">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
 <text x="0" y="-4" class="key tap">PgDown</text>
 </g>
-<g transform="translate(588, 196)" class="key keypos-45">
+<g transform="translate(588, 196)" class="key keypos-46">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
 <text x="0" y="-4" class="key tap">PgUp</text>
 </g>
-<g transform="translate(644, 196)" class="key keypos-46">
+<g transform="translate(644, 196)" class="key keypos-47">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
 <text x="0" y="-4" class="key tap">End</text>
@@ -1135,33 +1153,38 @@ rect.key.custom       { fill:#ebcb8b; }
 <a href="#LOWER">
 <text x="0" y="-4" class="key layer-switch-active tap layer-activator">LOWER</text>
 </a></g>
-<g transform="translate(336, 196)" class="key trans keypos-41">
-<rect rx="6" ry="6" x="-54" y="-26" width="108" height="52" class="key trans side"/>
-<rect rx="4" ry="4" x="-48" y="-24" width="96" height="40" class="key trans"/>
+<g transform="translate(308, 196)" class="key trans keypos-41">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key trans"/>
 <text x="0" y="-4" class="key trans tap">▽</text>
 </g>
-<g transform="translate(420, 196)" class="key layer-switch-active keypos-42">
+<g transform="translate(364, 196)" class="key trans keypos-42">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key trans"/>
+<text x="0" y="-4" class="key trans tap">▽</text>
+</g>
+<g transform="translate(420, 196)" class="key layer-switch-active keypos-43">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key layer-switch-active side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key layer-switch-active"/>
 <a href="#UPPER">
 <text x="0" y="-4" class="key layer-switch-active tap layer-activator">UPPER</text>
 </a></g>
-<g transform="translate(476, 196)" class="key trans keypos-43">
+<g transform="translate(476, 196)" class="key trans keypos-44">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key trans"/>
 <text x="0" y="-4" class="key trans tap">▽</text>
 </g>
-<g transform="translate(532, 196)" class="key trans keypos-44">
+<g transform="translate(532, 196)" class="key trans keypos-45">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key trans"/>
 <text x="0" y="-4" class="key trans tap">▽</text>
 </g>
-<g transform="translate(588, 196)" class="key trans keypos-45">
+<g transform="translate(588, 196)" class="key trans keypos-46">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key trans"/>
 <text x="0" y="-4" class="key trans tap">▽</text>
 </g>
-<g transform="translate(644, 196)" class="key trans keypos-46">
+<g transform="translate(644, 196)" class="key trans keypos-47">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key trans"/>
 <text x="0" y="-4" class="key trans tap">▽</text>
