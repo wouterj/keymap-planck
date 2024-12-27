@@ -32,7 +32,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_QWERTY] = LAYOUT_planck_grid(
     KC_TAB,        KC_Q,  KC_W,          KC_E,          KC_R,  KC_T,          KC_Y,          KC_U,  KC_I,            KC_O,            KC_P,    KC_BSPC,
     KC_ESC,        KC_A,  KC_S,          KC_D,          KC_F,  KC_G,          KC_H,          KC_J,  KC_K,            KC_L,            KC_SCLN, TD(TD_QUOT),
-    OSM(MOD_LSFT), KC_Z,  KC_X,          KC_C,          KC_V,  KC_B,          KC_N,          KC_M,  KC_COMM,         KC_DOT,          KC_SLSH, RSFT_T(KC_ENT),
+    OSM(MOD_LSFT), KC_Z,  KC_X,          KC_C,          KC_V,  KC_B,          KC_N,          KC_M,  KC_COMM,         KC_DOT,          KC_SLSH, KC_RSFT,
     OSM(MOD_LCTL), XCASE, OSM(MOD_LALT), OSM(MOD_LGUI), LOWER, SFT_T(KC_ENT), SFT_T(KC_SPC), RAISE, RGUI_T(KC_LEFT), RALT_T(KC_DOWN), KC_UP,   RCTL_T(KC_RGHT)
 ),
 
@@ -46,7 +46,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_DVORAK] = LAYOUT_planck_grid(
     KC_TAB,  KC_QUOT, KC_COMM, KC_DOT,  KC_P,  KC_Y,    KC_F,   KC_G,  KC_C,    KC_R,    KC_L,  KC_BSPC,
     KC_ESC,  KC_A,    KC_O,    KC_E,    KC_U,  KC_I,    KC_D,   KC_H,  KC_T,    KC_N,    KC_S,  KC_SLSH,
-    KC_LSFT, KC_SCLN, KC_Q,    KC_J,    KC_K,  KC_X,    KC_B,   KC_M,  KC_W,    KC_V,    KC_Z,  RSFT_T(KC_ENT),
+    KC_LSFT, KC_SCLN, KC_Q,    KC_J,    KC_K,  KC_X,    KC_B,   KC_M,  KC_W,    KC_V,    KC_Z,  KC_RSFT,
     KC_LCTL, XCASE,   KC_LALT, KC_LGUI, LOWER, KC_RSFT, KC_SPC, RAISE, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT
 ),
 
