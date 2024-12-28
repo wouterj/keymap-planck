@@ -30,25 +30,24 @@ enum { TD_PRN, TD_BRC, TD_CBR, TD_QUOT, TD_GRAV };
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_QWERTY] = LAYOUT_planck_grid(
-    KC_TAB,        KC_Q,  KC_W,          KC_E,          KC_R,  KC_T,          KC_Y,          KC_U,  KC_I,            KC_O,            KC_P,    KC_BSPC,
-    KC_ESC,        KC_A,  KC_S,          KC_D,          KC_F,  KC_G,          KC_H,          KC_J,  KC_K,            KC_L,            KC_SCLN, TD(TD_QUOT),
-    OSM(MOD_LSFT), KC_Z,  KC_X,          KC_C,          KC_V,  KC_B,          KC_N,          KC_M,  KC_COMM,         KC_DOT,          KC_SLSH, KC_RSFT,
-    OSM(MOD_LCTL), XCASE, OSM(MOD_LALT), OSM(MOD_LGUI), LOWER, SFT_T(KC_ENT), SFT_T(KC_SPC), RAISE, RGUI_T(KC_LEFT), RALT_T(KC_DOWN), KC_UP,   RCTL_T(KC_RGHT)
-),
+    KC_TAB,        KC_Q,         KC_W,          KC_E,          KC_R,         KC_T,          KC_Y,          KC_U,         KC_I,         KC_O,         KC_P,            KC_BSPC,
+    KC_ESC,        LALT_T(KC_A), LCTL_T(KC_S),  LSFT_T(KC_D),  LGUI_T(KC_F), KC_G,          KC_H,          LGUI_T(KC_J), LSFT_T(KC_K), LCTL_T(KC_L), LALT_T(KC_SCLN), TD(TD_QUOT),
+    OSM(MOD_LSFT), KC_Z,         KC_X,          KC_C,          KC_V,         KC_B,          KC_N,          KC_M,         KC_COMM,      KC_DOT,       KC_SLSH,         KC_RSFT,
+    OSM(MOD_LCTL), XCASE,        OSM(MOD_LALT), OSM(MOD_LGUI), LOWER,        SFT_T(KC_ENT), SFT_T(KC_SPC), RAISE,        KC_LEFT,      KC_DOWN,      KC_UP,           KC_RGHT
 ),
 
 [_LOWER] = LAYOUT_planck_grid(
-    KC_TILD, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, TD(TD_PRN), _______, _______,
-    KC_DEL,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_UNDS, KC_PLUS, TD(TD_CBR), _______, KC_PIPE,
-    _______, KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  _______, _______, TD(TD_BRC), _______, _______,
-    _______, _______, _______, _______, _______, _______, _______, _______, KC_MNXT, KC_VOLD,    KC_VOLU, KC_MPLY
+    KC_TILD, KC_EXLM,       KC_AT,         KC_HASH,       KC_DLR,        KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, TD(TD_PRN), _______, _______,
+    KC_DEL,  LALT_T(KC_F1), LCTL_T(KC_F2), LSFT_T(KC_F3), LGUI_T(KC_F4), KC_F5,   KC_F6,   KC_UNDS, KC_PLUS, TD(TD_CBR), KC_RALT, KC_PIPE,
+    _______, KC_F7,         KC_F8,         KC_F9,         KC_F10,        KC_F11,  KC_F12,  _______, _______, TD(TD_BRC), _______, _______,
+    _______, _______,       _______,       _______,       _______,       _______, _______, _______, KC_MNXT, KC_VOLD,    KC_VOLU, KC_MPLY
 ),
 
 [_RAISE] = LAYOUT_planck_grid(
-    TD(TD_GRAV), KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    _______,
-    KC_DEL,      KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_MINS, KC_EQL,  _______, _______, KC_BSLS,
-    _______,     KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  _______, _______, KC_PSCR, _______, _______,
-    _______,     _______, _______, _______, _______, _______, _______, _______, KC_HOME, KC_PGDN, KC_PGUP, KC_END
+    TD(TD_GRAV), KC_1,          KC_2,          KC_3,          KC_4,          KC_5,    KC_6,    KC_7,            KC_8,    KC_9,       KC_0,    _______,
+    KC_DEL,      LALT_T(KC_F1), LCTL_T(KC_F2), LSFT_T(KC_F3), LGUI_T(KC_F4), KC_F5,   KC_F6,   LGUI_T(KC_MINS), KC_EQL,  TD(TD_CBR), KC_RALT, KC_BSLS,
+    _______,     KC_F7,         KC_F8,         KC_F9,         KC_F10,        KC_F11,  KC_F12,  _______,         _______, KC_PSCR,    _______, _______,
+    _______,     _______,       _______,       _______,       _______,       _______, _______, _______,         KC_HOME, KC_PGDN,    KC_PGUP, KC_END
 ),
 
 [_ADJUST] = LAYOUT_planck_grid(
@@ -193,7 +192,7 @@ tap_dance_action_t tap_dance_actions[] = {
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case QK_TAP_DANCE ... QK_TAP_DANCE_MAX:
-            return 200;
+            return TAPPING_TERM + 100;
         default:
             return TAPPING_TERM;
     }

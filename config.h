@@ -46,6 +46,6 @@
  * Tab-hold options
  */
 
-#define TAPPING_TERM 100
+#define TAPPING_TERM 150
 #define TAPPING_TERM_PER_KEY
-#define RETRO_TAPPING_PER_KEY
+#define RETRO_TAPPING

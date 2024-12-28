@@ -126,14 +126,10 @@ rect.key.trans  { fill:#eceff4; }
 rect.side.layer-switch-active { filter:brightness(110%); }
 text.layer-switch-active { fill:white; }
 
-.keypos-38 rect,
-.keypos-39 rect,
 .keypos-40 rect,
 .keypos-41 rect,
 .keypos-42 rect,
 .keypos-43 rect { transform:scaleY(-1); }
-.keypos-38 text,
-.keypos-39 text,
 .keypos-40 text,
 .keypos-41 text,
 .keypos-42 text,
@@ -215,25 +211,29 @@ rect.key.custom       { fill:#ebcb8b; }
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
 <text x="0" y="-4" class="key tap">Esc</text>
 </g>
-<g transform="translate(84, 84)" class="key keypos-13">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
-<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="-4" class="key tap">A</text>
+<g transform="translate(84, 84)" class="key mod-down keypos-13">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key mod-down side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key mod-down"/>
+<text x="0" y="-4" class="key mod-down tap">A</text>
+<text x="0" y="24" class="key mod-down hold">Alt</text>
 </g>
-<g transform="translate(140, 84)" class="key keypos-14">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
-<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="-4" class="key tap">S</text>
+<g transform="translate(140, 84)" class="key mod-down keypos-14">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key mod-down side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key mod-down"/>
+<text x="0" y="-4" class="key mod-down tap">S</text>
+<text x="0" y="24" class="key mod-down hold">Ctrl</text>
 </g>
-<g transform="translate(196, 84)" class="key keypos-15">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
-<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="-4" class="key tap">D</text>
+<g transform="translate(196, 84)" class="key mod-down keypos-15">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key mod-down side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key mod-down"/>
+<text x="0" y="-4" class="key mod-down tap">D</text>
+<text x="0" y="24" class="key mod-down hold">Shift</text>
 </g>
-<g transform="translate(252, 84)" class="key keypos-16">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
-<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="-4" class="key tap">F</text>
+<g transform="translate(252, 84)" class="key mod-down keypos-16">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key mod-down side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key mod-down"/>
+<text x="0" y="-4" class="key mod-down tap">F</text>
+<text x="0" y="24" class="key mod-down hold">GUI</text>
 </g>
 <g transform="translate(308, 84)" class="key keypos-17">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
@@ -245,25 +245,29 @@ rect.key.custom       { fill:#ebcb8b; }
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
 <text x="0" y="-4" class="key tap">H</text>
 </g>
-<g transform="translate(420, 84)" class="key keypos-19">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
-<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="-4" class="key tap">J</text>
+<g transform="translate(420, 84)" class="key mod-down keypos-19">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key mod-down side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key mod-down"/>
+<text x="0" y="-4" class="key mod-down tap">J</text>
+<text x="0" y="24" class="key mod-down hold">GUI</text>
 </g>
-<g transform="translate(476, 84)" class="key keypos-20">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
-<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="-4" class="key tap">K</text>
+<g transform="translate(476, 84)" class="key mod-down keypos-20">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key mod-down side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key mod-down"/>
+<text x="0" y="-4" class="key mod-down tap">K</text>
+<text x="0" y="24" class="key mod-down hold">Shift</text>
 </g>
-<g transform="translate(532, 84)" class="key keypos-21">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
-<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="-4" class="key tap">L</text>
+<g transform="translate(532, 84)" class="key mod-down keypos-21">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key mod-down side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key mod-down"/>
+<text x="0" y="-4" class="key mod-down tap">L</text>
+<text x="0" y="24" class="key mod-down hold">Ctrl</text>
 </g>
-<g transform="translate(588, 84)" class="key keypos-22">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
-<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="-4" class="key tap">;</text>
+<g transform="translate(588, 84)" class="key mod-down keypos-22">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key mod-down side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key mod-down"/>
+<text x="0" y="-4" class="key mod-down tap">;</text>
+<text x="0" y="24" class="key mod-down hold">Alt</text>
 </g>
 <g transform="translate(644, 84)" class="key triple-tap keypos-23">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key triple-tap side"/>
@@ -328,8 +332,7 @@ rect.key.custom       { fill:#ebcb8b; }
 <g transform="translate(644, 140)" class="key mod-down keypos-35">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key mod-down side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key mod-down"/>
-<text x="0" y="-4" class="key mod-down tap">Enter</text>
-<text x="0" y="24" class="key mod-down hold">RShift</text>
+<text x="0" y="-4" class="key mod-down tap">RShift</text>
 </g>
 <g transform="translate(28, 196)" class="key mod-one-shot keypos-36">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key mod-one-shot side"/>
@@ -375,28 +378,25 @@ rect.key.custom       { fill:#ebcb8b; }
 <a href="#UPPER">
 <text x="0" y="-4" class="key layer-switch tap layer-activator">UPPER</text>
 </a></g>
-<g transform="translate(476, 196)" class="key mod-down keypos-44">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key mod-down side"/>
-<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key mod-down"/>
-<text x="0" y="-4" class="key mod-down tap">←</text>
-<text x="0" y="24" class="key mod-down hold">GUI</text>
+<g transform="translate(476, 196)" class="key keypos-44">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
+<text x="0" y="-4" class="key tap">←</text>
 </g>
-<g transform="translate(532, 196)" class="key mod-down keypos-45">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key mod-down side"/>
-<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key mod-down"/>
-<text x="0" y="-4" class="key mod-down tap">↓</text>
-<text x="0" y="24" class="key mod-down hold">RAlt</text>
+<g transform="translate(532, 196)" class="key keypos-45">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
+<text x="0" y="-4" class="key tap">↓</text>
 </g>
 <g transform="translate(588, 196)" class="key keypos-46">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
 <text x="0" y="-4" class="key tap">↑</text>
 </g>
-<g transform="translate(644, 196)" class="key mod-down keypos-47">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key mod-down side"/>
-<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key mod-down"/>
-<text x="0" y="-4" class="key mod-down tap">→</text>
-<text x="0" y="24" class="key mod-down hold">RCtl</text>
+<g transform="translate(644, 196)" class="key keypos-47">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
+<text x="0" y="-4" class="key tap">→</text>
 </g>
 </g>
 </g>
@@ -468,25 +468,29 @@ rect.key.custom       { fill:#ebcb8b; }
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
 <text x="0" y="-4" class="key tap">Delete</text>
 </g>
-<g transform="translate(84, 84)" class="key keypos-13">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
-<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="-4" class="key tap">F1</text>
+<g transform="translate(84, 84)" class="key mod-down keypos-13">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key mod-down side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key mod-down"/>
+<text x="0" y="-4" class="key mod-down tap">F1</text>
+<text x="0" y="24" class="key mod-down hold">Alt</text>
 </g>
-<g transform="translate(140, 84)" class="key keypos-14">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
-<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="-4" class="key tap">F2</text>
+<g transform="translate(140, 84)" class="key mod-down keypos-14">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key mod-down side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key mod-down"/>
+<text x="0" y="-4" class="key mod-down tap">F2</text>
+<text x="0" y="24" class="key mod-down hold">Ctrl</text>
 </g>
-<g transform="translate(196, 84)" class="key keypos-15">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
-<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="-4" class="key tap">F3</text>
+<g transform="translate(196, 84)" class="key mod-down keypos-15">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key mod-down side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key mod-down"/>
+<text x="0" y="-4" class="key mod-down tap">F3</text>
+<text x="0" y="24" class="key mod-down hold">Shift</text>
 </g>
-<g transform="translate(252, 84)" class="key keypos-16">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
-<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="-4" class="key tap">F4</text>
+<g transform="translate(252, 84)" class="key mod-down keypos-16">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key mod-down side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key mod-down"/>
+<text x="0" y="-4" class="key mod-down tap">F4</text>
+<text x="0" y="24" class="key mod-down hold">GUI</text>
 </g>
 <g transform="translate(308, 84)" class="key keypos-17">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
@@ -722,25 +726,29 @@ rect.key.custom       { fill:#ebcb8b; }
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
 <text x="0" y="-4" class="key tap">Delete</text>
 </g>
-<g transform="translate(84, 84)" class="key keypos-13">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
-<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="-4" class="key tap">F1</text>
+<g transform="translate(84, 84)" class="key mod-down keypos-13">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key mod-down side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key mod-down"/>
+<text x="0" y="-4" class="key mod-down tap">F1</text>
+<text x="0" y="24" class="key mod-down hold">Alt</text>
 </g>
-<g transform="translate(140, 84)" class="key keypos-14">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
-<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="-4" class="key tap">F2</text>
+<g transform="translate(140, 84)" class="key mod-down keypos-14">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key mod-down side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key mod-down"/>
+<text x="0" y="-4" class="key mod-down tap">F2</text>
+<text x="0" y="24" class="key mod-down hold">Ctrl</text>
 </g>
-<g transform="translate(196, 84)" class="key keypos-15">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
-<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="-4" class="key tap">F3</text>
+<g transform="translate(196, 84)" class="key mod-down keypos-15">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key mod-down side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key mod-down"/>
+<text x="0" y="-4" class="key mod-down tap">F3</text>
+<text x="0" y="24" class="key mod-down hold">Shift</text>
 </g>
-<g transform="translate(252, 84)" class="key keypos-16">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
-<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="-4" class="key tap">F4</text>
+<g transform="translate(252, 84)" class="key mod-down keypos-16">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key mod-down side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key mod-down"/>
+<text x="0" y="-4" class="key mod-down tap">F4</text>
+<text x="0" y="24" class="key mod-down hold">GUI</text>
 </g>
 <g transform="translate(308, 84)" class="key keypos-17">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>

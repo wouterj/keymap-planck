@@ -126,6 +126,17 @@ rect.key.trans  { fill:#eceff4; }
 rect.side.layer-switch-active { filter:brightness(110%); }
 text.layer-switch-active { fill:white; }
 
+.keypos-39 rect,
+.keypos-40 rect,
+.keypos-41 rect,
+.keypos-42 rect,
+.keypos-43 rect { transform:scaleY(-1); }
+.keypos-39 text,
+.keypos-40 text,
+.keypos-41 text,
+.keypos-42 text,
+.keypos-43 text { dominant-baseline:hanging; }
+
 rect.key.layer-switch,
 rect.key.layer-switch-active { fill:#a3be8c; }
 rect.key.double-tap   { fill:#b48ead; }
@@ -148,16 +159,14 @@ rect.key.custom       { fill:#ebcb8b; }
 <rect rx="6" ry="6" x="-28" y="-26" width="56" height="52" class="key mod-one-shot side"/>
 <rect rx="4" ry="4" x="-22" y="-24" width="44" height="40" class="key mod-one-shot"/>
 <text x="0" y="-4" class="key mod-one-shot tap">
-<tspan x="0" dy="-1.2em">One</tspan><tspan x="0" dy="1.2em">shot</tspan>
-<tspan x="0" dy="1.2em">mod</tspan>
+<tspan x="0" dy="-1.2em">One</tspan><tspan x="0" dy="1.2em">shot</tspan><tspan x="0" dy="1.2em">mod</tspan>
 </text>
 </g>
 <g transform="translate(150, 28)" class="key double-tap keypos-2">
 <rect rx="6" ry="6" x="-28" y="-26" width="56" height="52" class="key double-tap side"/>
 <rect rx="4" ry="4" x="-22" y="-24" width="44" height="40" class="key double-tap"/>
 <text x="0" y="-4" class="key double-tap tap">
-<tspan x="0" dy="-1.2em">Double</tspan><tspan x="0" dy="1.2em">tap</tspan>
-<tspan x="0" dy="1.2em">key</tspan>
+<tspan x="0" dy="-1.2em">Double</tspan><tspan x="0" dy="1.2em">tap</tspan><tspan x="0" dy="1.2em">key</tspan>
 </text>
 </g>
 <g transform="translate(210, 28)" class="key layer-switch keypos-3">
@@ -178,16 +187,14 @@ rect.key.custom       { fill:#ebcb8b; }
 <rect rx="6" ry="6" x="-28" y="-26" width="56" height="52" class="key mod-down side"/>
 <rect rx="4" ry="4" x="-22" y="-24" width="44" height="40" class="key mod-down"/>
 <text x="0" y="-4" class="key mod-down tap">
-<tspan x="0" dy="-1.2em">Hold</tspan><tspan x="0" dy="1.2em">down</tspan>
-<tspan x="0" dy="1.2em">mod</tspan>
+<tspan x="0" dy="-1.2em">Hold</tspan><tspan x="0" dy="1.2em">down</tspan><tspan x="0" dy="1.2em">mod</tspan>
 </text>
 </g>
 <g transform="translate(150, 84)" class="key triple-tap keypos-6">
 <rect rx="6" ry="6" x="-28" y="-26" width="56" height="52" class="key triple-tap side"/>
 <rect rx="4" ry="4" x="-22" y="-24" width="44" height="40" class="key triple-tap"/>
 <text x="0" y="-4" class="key triple-tap tap">
-<tspan x="0" dy="-1.2em">Triple</tspan><tspan x="0" dy="1.2em">tap</tspan>
-<tspan x="0" dy="1.2em">key</tspan>
+<tspan x="0" dy="-1.2em">Triple</tspan><tspan x="0" dy="1.2em">tap</tspan><tspan x="0" dy="1.2em">key</tspan>
 </text>
 </g>
 <g transform="translate(210, 84)" class="key layer-switch-active keypos-7">
