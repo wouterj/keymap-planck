@@ -17,7 +17,7 @@
 #include QMK_KEYBOARD_H
 #include "vendor/kyria-keymap/features/casemodes.h"
 
-enum planck_layers { _QWERTY, _LOWER, _RAISE, _ADJUST, _GAMING };
+enum planck_layers { _QWERTY, _GAMING, _LOWER, _RAISE, _ADJUST };
 
 enum planck_keycodes { QWERTY = SAFE_RANGE, GAMING, BACKLIT, XCASE };
 
@@ -36,6 +36,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     OSM(MOD_LCTL), XCASE,        OSM(MOD_LALT), OSM(MOD_LGUI), LOWER,        SFT_T(KC_ENT), SFT_T(KC_SPC), RAISE,        KC_LEFT,      KC_DOWN,      KC_UP,           KC_RGHT
 ),
 
+// QWERTY layer without the hold modifiers, used when gaming
+[_GAMING] = LAYOUT_planck_grid(
+    KC_TAB,  KC_Q,   KC_W,    KC_E,    KC_R,  KC_T,          KC_Y,          KC_U,  KC_I,    KC_O,    KC_P,    KC_BSPC,
+    KC_ESC,  KC_A,   KC_S,    KC_D,    KC_F,  KC_G,          KC_H,          KC_J,  KC_K,    KC_L,    KC_SCLN, TD_QUOT,
+    KC_LSFT, KC_Z,   KC_X,    KC_C,    KC_V,  KC_B,          KC_N,          KC_M,  KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,
+    KC_LCTL, QWERTY, KC_LALT, KC_LGUI, LOWER, SFT_T(KC_ENT), SFT_T(KC_SPC), RAISE, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT
+),
+
 [_LOWER] = LAYOUT_planck_grid(
     KC_TILD, KC_EXLM,       KC_AT,         KC_HASH,       KC_DLR,        KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, TD(TD_PRN), _______, _______,
     KC_DEL,  LALT_T(KC_F1), LCTL_T(KC_F2), LSFT_T(KC_F3), LGUI_T(KC_F4), KC_F5,   KC_F6,   KC_UNDS, KC_PLUS, TD(TD_CBR), KC_RALT, KC_PIPE,
@@ -48,13 +56,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_DEL,      LALT_T(KC_F1), LCTL_T(KC_F2), LSFT_T(KC_F3), LGUI_T(KC_F4), KC_F5,   KC_F6,   LGUI_T(KC_MINS), KC_EQL,  TD(TD_CBR), KC_RALT, KC_BSLS,
     _______,     KC_F7,         KC_F8,         KC_F9,         KC_F10,        KC_F11,  KC_F12,  _______,         _______, KC_PSCR,    _______, _______,
     _______,     _______,       _______,       _______,       _______,       _______, _______, _______,         KC_HOME, KC_PGDN,    KC_PGUP, KC_END
-),
-
-[_GAMING] = LAYOUT_planck_grid(
-    KC_TAB,  KC_Q,   KC_W,    KC_E,    KC_R,  KC_T,          KC_Y,          KC_U,  KC_I,    KC_O,    KC_P,    KC_BSPC,
-    KC_ESC,  KC_A,   KC_S,    KC_D,    KC_F,  KC_G,          KC_H,          KC_J,  KC_K,    KC_L,    KC_SCLN, TD_QUOT,
-    KC_LSFT, KC_Z,   KC_X,    KC_C,    KC_V,  KC_B,          KC_N,          KC_M,  KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,
-    KC_LCTL, QWERTY, KC_LALT, KC_LGUI, LOWER, SFT_T(KC_ENT), SFT_T(KC_SPC), RAISE, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT
 ),
 
 [_ADJUST] = LAYOUT_planck_grid(
