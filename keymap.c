@@ -46,22 +46,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_SYM] = LAYOUT_planck_grid(
     KC_EXLM,       KC_AT,         KC_HASH,       KC_DLR,        KC_PERC, KC_TILD, _______, KC_CIRC, KC_AMPR, KC_ASTR, TD(TD_PRN), _______,
-    LALT_T(KC_F1), LCTL_T(KC_F2), LSFT_T(KC_F3), LGUI_T(KC_F4), KC_F5,   KC_DEL,  KC_PIPE, KC_F6,   KC_UNDS, KC_PLUS, TD(TD_CBR), KC_RALT,
+    LALT_T(KC_F1), LCTL_T(KC_F2), LSFT_T(KC_F3), LGUI_T(KC_F4), KC_F5,   KC_DEL,  _______, KC_F6,   KC_UNDS, KC_PLUS, TD(TD_CBR), KC_PIPE,
     KC_F7,         KC_F8,         KC_F9,         KC_F10,        KC_F11,  _______, _______, KC_F12,  _______, _______, TD(TD_BRC), _______,
     _______,       _______,       _______,       _______,       _______, _______, _______, _______, KC_MNXT, KC_VOLD, KC_VOLU,    KC_MPLY
 ),
 
 [_NUM] = LAYOUT_planck_grid(
     KC_1,          KC_2,          KC_3,          KC_4,          KC_5,    TD(TD_GRAV), _______, KC_6,    KC_7,            KC_8,           KC_9,       KC_0,
-    LALT_T(KC_F1), LCTL_T(KC_F2), LSFT_T(KC_F3), LGUI_T(KC_F4), KC_F5,   KC_DEL,      KC_BSLS, KC_F6,   RGUI_T(KC_MINS), RSFT_T(KC_EQL), TD(TD_CBR), KC_RALT,
+    LALT_T(KC_F1), LCTL_T(KC_F2), LSFT_T(KC_F3), LGUI_T(KC_F4), KC_F5,   KC_DEL,      _______, KC_F6,   RGUI_T(KC_MINS), RSFT_T(KC_EQL), TD(TD_CBR), LALT_T(KC_BSLS),
     KC_F7,         KC_F8,         KC_F9,         KC_F10,        KC_F11,  _______,     _______, KC_F12,  _______,         _______,        KC_PSCR,    _______,
     _______,       _______,       _______,       _______,       _______, _______,     _______, _______, KC_HOME,         KC_PGDN,        KC_PGUP,    KC_END
 ),
 
 [_ADJUST] = LAYOUT_planck_grid(
-    _______, QK_BOOT, DB_TOGG, RGB_TOG, RGB_MOD, RGB_HUI, RGB_HUD, RGB_SAI, RGB_SAD, RGB_VAI, RGB_VAD, _______,
-    _______, EE_CLR,  MU_NEXT, AU_ON,   AU_OFF,  AG_NORM, AG_SWAP, _______, _______, _______, _______, _______,
-    _______, AU_PREV, AU_NEXT, MU_ON,   MU_OFF,  MI_ON,   MI_OFF,  _______, _______, _______, _______, _______,
+
+    QK_BOOT, DB_TOGG, RGB_TOG, RGB_MOD, RGB_HUI, _______, _______, RGB_HUD, RGB_SAI, RGB_SAD, RGB_VAI, RGB_VAD,
+    EE_CLR,  MU_NEXT, AU_ON,   AU_OFF,  AG_NORM, _______, _______, AG_SWAP, _______, _______, _______, _______,
+    AU_PREV, AU_NEXT, MU_ON,   MU_OFF,  MI_ON,   _______, _______, MI_OFF,  _______, _______, _______, _______,
     _______, GAMING,  _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
 )
 
